@@ -2,9 +2,9 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #a8dff8, #e6f7ff);
-    color: #333;
+    background: linear-gradient(to bottom, #a8dff8, #e6f7ff); 
 }
+
 h1 {
     text-align: center;
     background-color: #69c0fa; 
