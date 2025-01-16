@@ -1,52 +1,57 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #a8dff8, #e6f7ff); 
+    background: linear-gradient(to bottom, #a8dff8, #e6f7ff);
+    color: #222;
+    line-height: 1.6;
 }
 
-h1 {
+nav {
+    background: #69c0fa;
+    padding: 10px 0;
     text-align: center;
-    background-color: #69c0fa; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+header {
+    text-align: center;
+    background-color: #69c0fa;
     color: white;
     padding: 20px;
     margin: 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 h2 {
     color: #007acc;
     border-bottom: 2px solid #007acc;
     padding-bottom: 5px;
-    margin: 20px 10px;
-}
-p {
-    margin: 10px 20px;
-    line-height: 1.8;
-    color: #222;
-}
-ul {
-    list-style-type: disc;
-    margin: 10px 40px;
-    padding: 0;
+    margin: 20px 0;
 }
 
-ul li {
-    margin: 8px 0;
-    color: #333;
-}
-footer {
-    text-align: center;
-    padding: 15px;
-    background-color: #007acc; 
-    color: white;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
-}
-body > h2,
-body > ul,
-body > p {
+section {
     background: white;
     border-radius: 8px;
     padding: 20px;
@@ -54,6 +59,32 @@ body > p {
     max-width: 800px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+p {
+    margin: 10px 0;
+}
+
+ul {
+    list-style-type: disc;
+    margin: 10px 20px;
+    padding: 0;
+}
+
+ul li {
+    margin: 8px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #007acc;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+}
+
 a {
     color: #007acc;
     text-decoration: none;
