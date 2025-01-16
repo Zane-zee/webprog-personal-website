@@ -1,6 +1,7 @@
 /* Import the Montserrat font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
+/* General styles */
 body {
     font-family: 'Noto Serif JP', serif;
     margin: 0;
@@ -15,6 +16,7 @@ body {
     overflow: auto;
 }
 
+/* Neon container styles */
 .neon-container {
     width: 200px; /* Adjust the width as needed */
     height: 200px; /* Adjust the height to match the width for a circle */
@@ -43,6 +45,7 @@ body {
     transform: scale(1.1);
 }
 
+/* Navigation styles */
 nav {
     background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
     padding: 15px 0;
@@ -52,6 +55,7 @@ nav {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     position: relative;
+    border-radius: 8px; /* Rounded corners for the nav bar */
 }
 
 nav ul {
@@ -61,6 +65,7 @@ nav ul {
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 nav ul li {
@@ -82,6 +87,7 @@ nav ul li a:hover, nav ul li a.active {
     border-bottom: 2px solid #00ffff;
 }
 
+/* Main content styles */
 .main-content {
     position: relative;
     width: 100%;
@@ -96,6 +102,7 @@ nav ul li a:hover, nav ul li a.active {
     color: #fff; /* White text for better readability */
 }
 
+/* Section styles */
 .section {
     background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
     border: 2px solid #00ffff; /* Neon blue border */
@@ -150,4 +157,20 @@ button {
 
 button:hover {
     background: #00b2ff; /* Darker neon blue */
+}
+
+/* Responsive styles */
+@media (max-width: 800px) {
+    nav ul {
+        flex-direction: column; /* Stack navigation items vertically on smaller screens */
+    }
+
+    nav ul li {
+        width: 100%; /* Make navigation items full width */
+        text-align: center;
+    }
+
+    .main-content {
+        width: 90%; /* Adjust the width of the main content for smaller screens */
+    }
 }
