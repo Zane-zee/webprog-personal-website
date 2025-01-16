@@ -5,7 +5,8 @@ body {
     font-family: 'Noto Serif JP', serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #f5e6e0, #d8c3bc);
+    background: url('path/to/your/background.gif') no-repeat center center; /* Add your GIF path here */
+    background-size: cover;
     color: #333;
     display: flex;
     justify-content: center;
@@ -17,19 +18,22 @@ body {
 .container {
     width: 600px; /* Adjust the width as needed */
     height: 600px; /* Adjust the height to match the width for a circle */
-    background: #fff;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border: 3px solid #39ff14; /* Neon green border */
     border-radius: 50%; /* Circular shape */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 30px #39ff14, 0 0 40px #0f8f0a, 0 0 50px #0f8f0a, 0 0 60px #0f8f0a, 0 0 70px #0f8f0a; /* Neon glow effect */
     overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
     box-sizing: border-box; /* Ensure padding is included in the total width and height */
+    position: relative;
+    z-index: 1; /* Ensure the container is above the background */
 }
 
 nav {
-    background: #2c3e50;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
     padding: 15px 0;
     text-align: center;
     width: 100%;
@@ -54,7 +58,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: #39ff14; /* Neon green text */
     text-decoration: none;
     font-weight: bold;
     padding: 10px 15px;
@@ -64,13 +68,13 @@ nav ul li a {
 }
 
 nav ul li a:hover, nav ul li a.active {
-    border-bottom: 2px solid #3498db;
+    border-bottom: 2px solid #39ff14;
 }
 
 header {
     text-align: center;
-    background-color: #2c3e50;
-    color: white;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: #39ff14; /* Neon green text */
     padding: 20px;
     margin: 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -87,7 +91,7 @@ header h1 {
 }
 
 header h1:hover {
-    color: #3498db;
+    color: #0f8f0a; /* Darker neon green */
     transform: scale(1.1);
 }
 
@@ -102,7 +106,7 @@ header h1:hover {
 }
 
 .section {
-    background: #fff;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -120,20 +124,22 @@ header h1:hover {
 }
 
 h2 {
-    color: #2c3e50;
-    border-bottom: 2px solid #2c3e50;
+    color: #39ff14; /* Neon green text */
+    border-bottom: 2px solid #39ff14;
     padding-bottom: 5px;
     margin: 20px 0 10px 0;
 }
 
 p {
     margin: 10px 0;
+    color: #fff; /* White text for better readability */
 }
 
 ul {
     list-style-type: disc;
     margin: 10px 20px;
     padding: 0;
+    color: #fff; /* White text for better readability */
 }
 
 ul li {
@@ -141,8 +147,8 @@ ul li {
 }
 
 button {
-    background: #3498db;
-    color: white;
+    background: #39ff14; /* Neon green background */
+    color: #000; /* Black text for contrast */
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -151,5 +157,5 @@ button {
 }
 
 button:hover {
-    background: #2980b9;
+    background: #0f8f0a; /* Darker neon green */
 }
