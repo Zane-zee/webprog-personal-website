@@ -11,7 +11,7 @@
     <div class="container">
         <nav>
             <ul>
-                <li><a href="#" data-target="about-me">About Me</a></li>
+                <li><a href="#" data-target="about-me" class="active">About Me</a></li>
                 <li><a href="#" data-target="education">Education</a></li>
                 <li><a href="#" data-target="course">Course</a></li>
                 <li><a href="#" data-target="it-experience">IT Experience</a></li>
@@ -22,7 +22,7 @@
         <header>
             <h1>Personal Profile Web Page</h1>
         </header>
-        <main id="content">
+        <main id="content" class="main-content">
             <section id="about-me" class="section active">
                 <h2>About Me</h2>
                 <p>Hello! I’m Zane, a passionate IT student specializing in Mobile and Internet Technologies.</p>
@@ -60,9 +60,6 @@
                 <p>To become a successful software developer and create apps that positively impact people's lives.</p>
             </section>
         </main>
-        <footer>
-            <p>© 2024 John Zane Baluyan. All Rights Reserved.</p>
-        </footer>
     </div>
     <script>
         document.querySelectorAll('nav a').forEach(anchor => {
@@ -70,10 +67,16 @@
                 e.preventDefault();
                 const target = this.getAttribute('data-target');
                 const sections = document.querySelectorAll('.section');
+                const navLinks = document.querySelectorAll('nav a');
+                
                 sections.forEach(section => {
                     section.classList.remove('active');
                 });
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                });
                 document.getElementById(target).classList.add('active');
+                this.classList.add('active');
             });
         });
     </script>
