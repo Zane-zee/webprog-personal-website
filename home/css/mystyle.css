@@ -71,6 +71,18 @@ header {
     width: 100%;
 }
 
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    margin: 0;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+header h1:hover {
+    color: #3498db;
+    transform: scale(1.1);
+}
+
 .main-content {
     position: relative;
     width: 90%;
@@ -132,3 +144,5 @@ button {
 button:hover {
     background: #2980b9;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
