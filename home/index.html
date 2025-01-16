@@ -1,43 +1,84 @@
 <!DOCTYPE html>
-<html>    
-<head>    
-<title>Zaneee Profile</title>    
-<link rel="stylesheet" href="css/mystyle.css">
-</head>    
+<html>
+<head>
+    <title>Zaneee Profile</title>
+    <link rel="stylesheet" href="css/mystyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
 <body>
-<h1>Personal Profile Web page </h1>    
+    <nav>
+        <ul>
+            <li><a href="#about-me">About Me</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#course">Course</a></li>
+            <li><a href="#it-experience">IT Experience</a></li>
+            <li><a href="#hobbies">Hobbies & Interests</a></li>
+            <li><a href="#goals">Goals in Life / Dream</a></li>
+        </ul>
+    </nav>
 
-<h2>About Me</h2>  
-<p>Hello! I’m Zane, a passionate IT student specializing in Mobile and Internet Technologies.</p>
-<h2>Education</h2>
-<ul>
-    <li>STI College Pasay-EDSA (SHS STEM)</li>
-    <li>Asia Pacific College (2nd Year)</li>
-</ul>
+    <header>
+        <h1>Personal Profile Web page</h1>
+    </header>
 
-<h2>Course</h2>
-<p>Bachelor of Science in Information Technology with specialization in Mobile and Internet Technologies</p>    
+    <main>
+        <section id="about-me">
+            <h2>About Me</h2>
+            <p>Hello! I’m Zane, a passionate IT student specializing in Mobile and Internet Technologies.</p>
+        </section>
 
-<h2>IT Experience</h2>
-<ul>
-    <li>Basic Codes of Java</li>
-    <li>Basic Codes of Python</li>
-    <li>Basic Knowledge in Figma</li>
-    <li>Created an app using Figma & Android Studio</li>
-</ul>
+        <section id="education">
+            <h2>Education</h2>
+            <ul>
+                <li>STI College Pasay-EDSA (SHS STEM)</li>
+                <li>Asia Pacific College (2nd Year)</li>
+            </ul>
+        </section>
 
-<h2>Hobbies & Interests</h2>
-<ul>
-    <li>Going to the gym</li>
-    <li>Playing Video Games</li>
-    <li>Streaming</li>
-</ul> 
+        <section id="course">
+            <h2>Course</h2>
+            <p>Bachelor of Science in Information Technology with specialization in Mobile and Internet Technologies</p>
+        </section>
 
-<h2>Goals in Life / Dream</h2>
-<p>To become a successful software developer and create apps that positively impact people's lives.</p>  
+        <section id="it-experience">
+            <h2>IT Experience</h2>
+            <ul>
+                <li>Basic Codes of Java</li>
+                <li>Basic Codes of Python</li>
+                <li>Basic Knowledge in Figma</li>
+                <li>Created an app using Figma & Android Studio</li>
+            </ul>
+        </section>
 
-<footer>
-    <p>© 2024 John Zane Baluyan. All Rights Reserved.</p>
-</footer>
-</body>    
+        <section id="hobbies">
+            <h2>Hobbies & Interests</h2>
+            <ul>
+                <li>Going to the gym</li>
+                <li>Playing Video Games</li>
+                <li>Streaming</li>
+            </ul>
+        </section>
+
+        <section id="goals">
+            <h2>Goals in Life / Dream</h2>
+            <p>To become a successful software developer and create apps that positively impact people's lives.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 John Zane Baluyan. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
 </html>
