@@ -8,80 +8,71 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="#" data-target="about-me">About Me</a></li>
-            <li><a href="#" data-target="education">Education</a></li>
-            <li><a href="#" data-target="course">Course</a></li>
-            <li><a href="#" data-target="it-experience">IT Experience</a></li>
-            <li><a href="#" data-target="hobbies">Hobbies & Interests</a></li>
-            <li><a href="#" data-target="goals">Goals in Life / Dream</a></li>
-        </ul>
-    </nav>
-
-    <header>
-        <h1>Personal Profile Web page</h1>
-    </header>
-
-    <main id="content">
-        <section id="about-me" class="section active">
-            <h2>About Me</h2>
-            <p>Hello! I’m Zane, a passionate IT student specializing in Mobile and Internet Technologies.</p>
-        </section>
-
-        <section id="education" class="section">
-            <h2>Education</h2>
+    <div class="container">
+        <nav>
             <ul>
-                <li>STI College Pasay-EDSA (SHS STEM)</li>
-                <li>Asia Pacific College (2nd Year)</li>
+                <li><a href="#" data-target="about-me">About Me</a></li>
+                <li><a href="#" data-target="education">Education</a></li>
+                <li><a href="#" data-target="course">Course</a></li>
+                <li><a href="#" data-target="it-experience">IT Experience</a></li>
+                <li><a href="#" data-target="hobbies">Hobbies & Interests</a></li>
+                <li><a href="#" data-target="goals">Goals in Life / Dream</a></li>
             </ul>
-        </section>
-
-        <section id="course" class="section">
-            <h2>Course</h2>
-            <p>Bachelor of Science in Information Technology with specialization in Mobile and Internet Technologies</p>
-        </section>
-
-        <section id="it-experience" class="section">
-            <h2>IT Experience</h2>
-            <ul>
-                <li>Basic Codes of Java</li>
-                <li>Basic Codes of Python</li>
-                <li>Basic Knowledge in Figma</li>
-                <li>Created an app using Figma & Android Studio</li>
-            </ul>
-        </section>
-
-        <section id="hobbies" class="section">
-            <h2>Hobbies & Interests</h2>
-            <ul>
-                <li>Going to the gym</li>
-                <li>Playing Video Games</li>
-                <li>Streaming</li>
-            </ul>
-        </section>
-
-        <section id="goals" class="section">
-            <h2>Goals in Life / Dream</h2>
-            <p>To become a successful software developer and create apps that positively impact people's lives.</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>© 2024 John Zane Baluyan. All Rights Reserved.</p>
-    </footer>
-
+        </nav>
+        <header>
+            <h1>Personal Profile Web Page</h1>
+        </header>
+        <main id="content">
+            <section id="about-me" class="section active">
+                <h2>About Me</h2>
+                <p>Hello! I’m Zane, a passionate IT student specializing in Mobile and Internet Technologies.</p>
+            </section>
+            <section id="education" class="section">
+                <h2>Education</h2>
+                <ul>
+                    <li>STI College Pasay-EDSA (SHS STEM)</li>
+                    <li>Asia Pacific College (2nd Year)</li>
+                </ul>
+            </section>
+            <section id="course" class="section">
+                <h2>Course</h2>
+                <p>Bachelor of Science in Information Technology with specialization in Mobile and Internet Technologies</p>
+            </section>
+            <section id="it-experience" class="section">
+                <h2>IT Experience</h2>
+                <ul>
+                    <li>Basic Codes of Java</li>
+                    <li>Basic Codes of Python</li>
+                    <li>Basic Knowledge in Figma</li>
+                    <li>Created an app using Figma & Android Studio</li>
+                </ul>
+            </section>
+            <section id="hobbies" class="section">
+                <h2>Hobbies & Interests</h2>
+                <ul>
+                    <li>Going to the gym</li>
+                    <li>Playing Video Games</li>
+                    <li>Streaming</li>
+                </ul>
+            </section>
+            <section id="goals" class="section">
+                <h2>Goals in Life / Dream</h2>
+                <p>To become a successful software developer and create apps that positively impact people's lives.</p>
+            </section>
+        </main>
+        <footer>
+            <p>© 2024 John Zane Baluyan. All Rights Reserved.</p>
+        </footer>
+    </div>
     <script>
         document.querySelectorAll('nav a').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = this.getAttribute('data-target');
                 const sections = document.querySelectorAll('.section');
-
                 sections.forEach(section => {
                     section.classList.remove('active');
                 });
-
                 document.getElementById(target).classList.add('active');
             });
         });
