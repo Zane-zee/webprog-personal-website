@@ -1,3 +1,4 @@
+/* Import the Montserrat font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
 body {
@@ -14,17 +15,17 @@ body {
 }
 
 .container {
-    width: 600px; 
-    height: 600px; 
+    width: 600px; /* Adjust the width as needed */
+    height: 600px; /* Adjust the height to match the width for a circle */
     background: #fff;
-    border-radius: 50%; 
+    border-radius: 50%; /* Circular shape */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    box-sizing: border-box; 
+    box-sizing: border-box; /* Ensure padding is included in the total width and height */
 }
 
 nav {
@@ -33,7 +34,7 @@ nav {
     text-align: center;
     width: 100%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 50% 50% 0 0; 
+    border-radius: 50% 50% 0 0; /* Curved top to match the container */
     z-index: 1000;
 }
 
@@ -73,7 +74,7 @@ header {
     margin: 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 100%;
-    border-radius: 0 0 50% 50%; 
+    border-radius: 0 0 50% 50%; /* Curved bottom to match the container */
 }
 
 header h1 {
@@ -92,7 +93,7 @@ header h1:hover {
     position: relative;
     width: 100%;
     padding: 20px;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Ensure padding is included in the total width */
     flex: 1;
     overflow: auto;
 }
