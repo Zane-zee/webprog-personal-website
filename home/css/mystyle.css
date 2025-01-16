@@ -9,27 +9,38 @@ body {
     background-size: cover;
     color: #333;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     height: 100vh;
     overflow: auto;
 }
 
-.container {
-    width: 600px; /* Adjust the width as needed */
-    height: 600px; /* Adjust the height to match the width for a circle */
+.neon-container {
+    width: 200px; /* Adjust the width as needed */
+    height: 200px; /* Adjust the height to match the width for a circle */
     background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    border: 3px solid #39ff14; /* Neon green border */
+    border: 3px solid #00ffff; /* Neon blue border */
     border-radius: 50%; /* Circular shape */
-    box-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 30px #39ff14, 0 0 40px #0f8f0a, 0 0 50px #0f8f0a, 0 0 60px #0f8f0a, 0 0 70px #0f8f0a; /* Neon glow effect */
-    overflow: hidden;
+    box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00b2ff, 0 0 40px #00b2ff, 0 0 50px #00b2ff, 0 0 60px #00b2ff, 0 0 70px #00b2ff; /* Neon glow effect */
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding: 20px;
-    box-sizing: border-box; /* Ensure padding is included in the total width and height */
+    margin: 20px 0;
     position: relative;
     z-index: 1; /* Ensure the container is above the background */
+}
+
+.neon-container h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    margin: 0;
+    color: #00ffff; /* Neon blue text */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.neon-container h1:hover {
+    color: #00b2ff; /* Darker neon blue */
+    transform: scale(1.1);
 }
 
 nav {
@@ -38,7 +49,6 @@ nav {
     text-align: center;
     width: 100%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 50% 50% 0 0; /* Curved top to match the container */
     z-index: 1000;
     position: relative;
 }
@@ -58,7 +68,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #39ff14; /* Neon green text */
+    color: #00ffff; /* Neon blue text */
     text-decoration: none;
     font-weight: bold;
     padding: 10px 15px;
@@ -68,41 +78,21 @@ nav ul li a {
 }
 
 nav ul li a:hover, nav ul li a.active {
-    border-bottom: 2px solid #39ff14;
-}
-
-header {
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-    color: #39ff14; /* Neon green text */
-    padding: 20px;
-    margin: 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    border-radius: 0 0 50% 50%; /* Curved bottom to match the container */
-    position: relative;
-}
-
-header h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 3em;
-    margin: 0;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-header h1:hover {
-    color: #0f8f0a; /* Darker neon green */
-    transform: scale(1.1);
+    border-bottom: 2px solid #00ffff;
 }
 
 .main-content {
     position: relative;
-    width: 100%;
+    width: 80%;
+    max-width: 800px;
     padding: 20px;
     box-sizing: border-box; /* Ensure padding is included in the total width */
     flex: 1;
     overflow: auto;
-    border-radius: 0 0 50% 50%; /* Curved bottom to match the container */
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    border-radius: 8px;
+    margin: 20px 0;
+    color: #fff; /* White text for better readability */
 }
 
 .section {
@@ -124,8 +114,8 @@ header h1:hover {
 }
 
 h2 {
-    color: #39ff14; /* Neon green text */
-    border-bottom: 2px solid #39ff14;
+    color: #00ffff; /* Neon blue text */
+    border-bottom: 2px solid #00ffff;
     padding-bottom: 5px;
     margin: 20px 0 10px 0;
 }
@@ -147,7 +137,7 @@ ul li {
 }
 
 button {
-    background: #39ff14; /* Neon green background */
+    background: #00ffff; /* Neon blue background */
     color: #000; /* Black text for contrast */
     border: none;
     padding: 10px 20px;
@@ -157,5 +147,5 @@ button {
 }
 
 button:hover {
-    background: #0f8f0a; /* Darker neon green */
+    background: #00b2ff; /* Darker neon blue */
 }
