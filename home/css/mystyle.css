@@ -4,7 +4,7 @@ body {
     padding: 0;
     background: linear-gradient(to bottom, #f5e6e0, #d8c3bc);
     color: #333;
-    overflow: hidden; /* Prevent scrolling */
+    overflow: hidden; 
 }
 
 nav {
@@ -48,13 +48,13 @@ header {
     padding: 20px;
     margin: 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-top: 50px; /* Account for fixed nav height */
+    margin-top: 50px; 
 }
 
 main {
     position: relative;
     width: 100%;
-    height: calc(100vh - 100px); /* Adjust for the fixed nav and footer height */
+    height: calc(100vh - 100px); 
     overflow: hidden;
 }
 
