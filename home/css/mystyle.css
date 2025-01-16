@@ -36,6 +36,7 @@ nav {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 50% 50% 0 0; /* Curved top to match the container */
     z-index: 1000;
+    position: relative;
 }
 
 nav ul {
@@ -75,6 +76,7 @@ header {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 100%;
     border-radius: 0 0 50% 50%; /* Curved bottom to match the container */
+    position: relative;
 }
 
 header h1 {
@@ -96,6 +98,7 @@ header h1:hover {
     box-sizing: border-box; /* Ensure padding is included in the total width */
     flex: 1;
     overflow: auto;
+    border-radius: 0 0 50% 50%; /* Curved bottom to match the container */
 }
 
 .section {
