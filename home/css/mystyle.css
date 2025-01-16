@@ -48,6 +48,7 @@ nav {
     padding: 15px 0;
     text-align: center;
     width: 100%;
+    max-width: 800px; /* Ensure the navigation bar is not too wide */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     position: relative;
@@ -83,8 +84,8 @@ nav ul li a:hover, nav ul li a.active {
 
 .main-content {
     position: relative;
-    width: 80%;
-    max-width: 800px;
+    width: 100%;
+    max-width: 800px; /* Ensure the main content is not too wide */
     padding: 20px;
     box-sizing: border-box; /* Ensure padding is included in the total width */
     flex: 1;
@@ -97,9 +98,10 @@ nav ul li a:hover, nav ul li a.active {
 
 .section {
     background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    border: 2px solid #00ffff; /* Neon blue border */
     border-radius: 8px;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00b2ff, 0 0 40px #00b2ff, 0 0 50px #00b2ff, 0 0 60px #00b2ff, 0 0 70px #00b2ff; /* Neon glow effect */
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.5s ease, transform 0.5s ease;
