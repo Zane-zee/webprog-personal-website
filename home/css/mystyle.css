@@ -4,7 +4,7 @@ body {
     padding: 0;
     background: linear-gradient(to bottom, #f5e6e0, #d8c3bc);
     color: #333;
-    overflow: hidden; 
+    overflow: hidden; /* Prevent scrolling */
 }
 
 nav {
@@ -48,14 +48,15 @@ header {
     padding: 20px;
     margin: 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-top: 50px; 
+    margin-top: 50px; /* Account for fixed nav height */
 }
 
 main {
     position: relative;
     width: 100%;
-    height: calc(100vh - 100px); 
+    height: calc(100vh - 140px); /* Adjust for the fixed nav and footer height */
     overflow: hidden;
+    margin-top: 20px; /* Space between header and main */
 }
 
 .section {
@@ -68,14 +69,16 @@ main {
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: opacity 0.5s ease, transform 0.5s ease;
     opacity: 0;
+    pointer-events: none; /* Prevent interaction with inactive sections */
+    transition: opacity 0.5s ease, transform 0.5s ease;
     transform: translateY(20px);
 }
 
 .section.active {
     opacity: 1;
     transform: translateY(0);
+    pointer-events: auto; /* Allow interaction with the active section */
 }
 
 h2 {
