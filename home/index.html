@@ -10,12 +10,12 @@
 <body>
     <nav>
         <ul>
-            <li><a href="#about-me">About Me</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#course">Course</a></li>
-            <li><a href="#it-experience">IT Experience</a></li>
-            <li><a href="#hobbies">Hobbies & Interests</a></li>
-            <li><a href="#goals">Goals in Life / Dream</a></li>
+            <li><a href="#" data-target="about-me">About Me</a></li>
+            <li><a href="#" data-target="education">Education</a></li>
+            <li><a href="#" data-target="course">Course</a></li>
+            <li><a href="#" data-target="it-experience">IT Experience</a></li>
+            <li><a href="#" data-target="hobbies">Hobbies & Interests</a></li>
+            <li><a href="#" data-target="goals">Goals in Life / Dream</a></li>
         </ul>
     </nav>
 
@@ -23,8 +23,8 @@
         <h1>Personal Profile Web page</h1>
     </header>
 
-    <main>
-        <section id="about-me" class="section">
+    <main id="content">
+        <section id="about-me" class="section active">
             <h2>About Me</h2>
             <p>Hello! I’m Zane, a passionate IT student specializing in Mobile and Internet Technologies.</p>
         </section>
@@ -72,13 +72,17 @@
     </footer>
 
     <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        document.querySelectorAll('nav a').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
+                const target = this.getAttribute('data-target');
+                const sections = document.querySelectorAll('.section');
 
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
+                sections.forEach(section => {
+                    section.classList.remove('active');
                 });
+
+                document.getElementById(target).classList.add('active');
             });
         });
     </script>
